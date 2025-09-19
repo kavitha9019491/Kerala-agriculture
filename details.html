@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Plant Details - Kerala Agriculture</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="details-page">
+  <h1 id="plantName">Plant Details</h1>
+  
+  <div class="details-box">
+    <p id="plantInfo">Loading plant details...</p>
+  </div>
+
+  <h2>📸 Upload/Take Photo</h2>
+  <input type="file" accept="image/*" capture="camera" onchange="previewImage(event)">
+  <br><br>
+  <img id="preview" style="max-width:300px; display:none; border:2px solid green; border-radius:10px;">
+
+  <button onclick="window.location.href='plants.html'">⬅ Back to Plants</button>
+  
+  <script src="script.js"></script>
+</body>
+</html>
+<h2>🌿 Disease Detection</h2>
+<button onclick="detectDisease()">Check for Disease</button>
+<p id="diseaseResult"></p>
+<h2>🌿 Disease Detection</h2>
+<button onclick="analyzePhoto()">Analyze Photo</button>
+<p id="diseaseResult"></p>
+<h2>📸 Take/Upload Plant Photo</h2>
+
+<!-- Live Camera -->
+<video id="camera" autoplay playsinline width="300" height="220" style="border:2px solid green; border-radius:10px;"></video>
+<br>
+<button onclick="capturePhoto()">📷 Capture</button>
+
+<!-- Captured Image Preview -->
+<canvas id="canvas" width="300" height="220" style="display:none;"></canvas>
+<img id="preview" style="max-width:300px; display:none; border:2px solid green; border-radius:10px;">
+
+<br><br>
+<button onclick="window.location.href='plants.html'">⬅ Back to Plants</button>
